@@ -1,7 +1,5 @@
 
 
-  
-
 
 
 
@@ -20,9 +18,23 @@
   
   
   
-    <meta name="description" content="SoSo的个人博客">
+    <meta name="description" content="块级元素1display : block;
+
+特点:
+
+可设置宽高，宽度默认100%
+margin、padding均有效
+自动换行，且独占一行（元素前后有换行符）
+
+常见元素：div p h1~h6 ol ul dl table address blockquote form
+内联元素1display : inline;
+
+特点:
+
+设置宽高无效，宽度随元素内容变化
+margin、paddi...">
   
-  <title>Archives [ SoSo的小窝 ]</title>
+  <title>块级元素、内联元素与内联块级元素的区别 [ SoSo的小窝 ]</title>
   
   
     <link rel="shortcut icon" href="/hollow.ico">
@@ -41,6 +53,15 @@
 <body>
 <div class="side-navigate hide-area">
   
+  
+    <div class="item next">
+      <a href="/2019/08/06/hello-world/">
+        <div class="item-icon"></div>
+      </a>
+      <div class="item-title">
+        Hello World
+      </div>
+    </div>
   
 </div>
 <div id="outer-container" class="hide-area">
@@ -66,7 +87,7 @@
           </li>
         
           
-            <li class="active">
+            <li>
           
             <a href="/archives">文章</a>
             
@@ -112,115 +133,100 @@
     <div id="content-inner">
       
       
-  <article>
-    
+  
 
-  <div id="recent-posts">
-    <h1>Archives
-    
-        <span class="posts-count">
-        Total
-        2
-        
-            posts
-        
-        </span>
-    
-    </h1>
-    
-    
-        
-        
-            
-        
-        
-    
-        
-        
-        
-    
-    
-    
-        
-        
-            
-            <h3 class="archive-year-title">2019
-            
-                <span class="posts-count">
-                Total
-                2
-                
-                    posts
-                
-                </span>
-            
-            </h3>
-        
-        <div class="post-title-item">
-  
-  <a href="/2019/08/06/blog1/">
-  
-    块级元素、内联元素与内联块级元素的区别
-  
-  </a>
-  <p class="page-title-sub">
-    <span id="post-title-date">8-6</span>
-    
-    <span id="post-title-categories">Category
-    
-    
+  <article id="post">
+    <h1>块级元素、内联元素与内联块级元素的区别</h1>
+    <p class="page-title-sub">
+      <span id="post-title-date">Created at 2019-08-06</span>
+      
+        <span id="post-title-updated">Updated at 2019-08-06</span>
       
       
-      <a href="/categories/HTML/">HTML</a>
-    
-    </span>
-    
-    
-    <span id="post-title-tags">
-    Tag
-    
-    
+      <span id="post-title-categories">Category
       
       
-      <a href="/tags/HTML/">HTML</a>
-    
-    </span>
-    
-    
-      <br>
-      
-      
-    
-  </p>
-  
-</div>
-    
         
         
-        <div class="post-title-item">
-  
-  <a href="/2019/08/06/hello-world/">
-  
-    Hello World
-  
-  </a>
-  <p class="page-title-sub">
-    <span id="post-title-date">8-6</span>
-    
-    
-    
-      <br>
+        <a href="/categories/HTML/">HTML</a>
+      
+      </span>
       
       
+      <span id="post-title-tags">
+      Tag
+      
+      
+        
+        
+        <a href="/tags/HTML/">HTML</a>
+      
+      </span>
+      
+    </p>
     
-  </p>
-  
-</div>
-    
-  </div>
+    <h2 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">display</span> : <span class="selector-tag">block</span>;</span><br></pre></td></tr></table></figure>
 
+<p><strong>特点</strong>:</p>
+<ul>
+<li>可设置宽高，宽度默认100%</li>
+<li>margin、padding均有效</li>
+<li>自动换行，且独占一行（元素前后有换行符）</li>
+</ul>
+<p><strong>常见元素</strong>：div p h1~h6 ol ul dl table address blockquote form<br><br><br></p>
+<h2 id="内联元素"><a href="#内联元素" class="headerlink" title="内联元素"></a>内联元素</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">display</span> : <span class="selector-tag">inline</span>;</span><br></pre></td></tr></table></figure>
+
+<p><strong>特点</strong>:</p>
+<ul>
+<li>设置宽高无效，宽度随元素内容变化</li>
+<li>margin、padding左右有效，上下无效 (padding上下看上去有效，但对周围元素并无影响)</li>
+<li>inline元素不会独占一行，多个相邻的行内元素会排列在同一行里，直到一行排列不下，才会新换一行</li>
+</ul>
+<p><strong>常见元素</strong>：a span br i em strong label q var cite code<br><br><br></p>
+<h2 id="内联块级元素"><a href="#内联块级元素" class="headerlink" title="内联块级元素"></a>内联块级元素</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">display</span> : <span class="selector-tag">inline-block</span>;</span><br></pre></td></tr></table></figure>
+
+<p><strong>特点</strong>:</p>
+<ul>
+<li>能设置宽高</li>
+<li>margin、padding均有效</li>
+<li>不会自动换行</li>
+</ul>
+<p><strong>常见元素</strong>：img input </p>
+<p><br><br></p>
+<h2 id="可置换元素"><a href="#可置换元素" class="headerlink" title="可置换元素"></a>可置换元素</h2><blockquote>
+<p>一个内容 不受CSS视觉格式化模型控制，CSS渲染模型并不考虑对此内容的渲染，且元素本身一般拥有固有尺寸（宽度，高度，宽高比）的元素，被称之为置换元素。 </p>
+</blockquote>
+<ul>
+<li>置换元素就是浏览器根据元素的标签和属性，来决定元素的具体显示内容。 </li>
+<li>例如浏览器会根据img标签的src属性的值来读取图片信息并显示出来，而如果查看(X)HTML代码，则看不到图片的实际内容；又例如根据input标签的type属性来决定是显示输入框，还是单选按钮等。 </li>
+<li>HTML中的img、input、textarea、select、object都是置换元素。这些元素往往没有实际的内容，即是一个空元素。</li>
+</ul>
 
   </article>
+  <div class="random-toc-area">
+  <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">Show TOC</button>
+  <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">Hide TOC</button>
+  <div class="random-toc">
+    <h2>Table of Content</h2>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#块级元素"><span class="toc-text">块级元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内联元素"><span class="toc-text">内联元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内联块级元素"><span class="toc-text">内联块级元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#可置换元素"><span class="toc-text">可置换元素</span></a></li></ol>
+  </div>
+</div>
+
+  
+<nav id="pagination">
+  
+
+  
+
+  
+    <a href="/2019/08/06/hello-world/" class="next">Next post Hello World &rarr;</a>
+  
+</nav>
+
+  <!-- JiaThis Button BEGIN -->
+
+<!-- JiaThis Button END -->
+
 
       
       
